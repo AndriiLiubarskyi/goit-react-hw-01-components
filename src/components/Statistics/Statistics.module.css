@@ -1,0 +1,22 @@
+.statistics {
+  background-color: gainsboro;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statisticsList {
+  display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+  padding: 20px;
+}
+.item {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
