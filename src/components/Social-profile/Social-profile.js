@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 import styles from './Social-profile.module.css';
 
-const SocialProfile = ({avatar, name, tag, location, followers, views, likes }) => (
+const SocialProfile = ({avatar, name, tag, location, stats }) => (
     <div className={styles.profile}>
         <div className={styles.description}>
             <img
@@ -18,15 +18,15 @@ const SocialProfile = ({avatar, name, tag, location, followers, views, likes }) 
         <ul className={styles.stats}>
             <li>
                 <span className={styles.label}>Followers</span>
-                <span className={styles.quantity}>{followers}</span>
+                <span className={styles.quantity}>{stats.followers}</span>
             </li>
             <li>
                 <span className={styles.label}>Views</span>
-                <span className={styles.quantity}>{views}</span>
+                <span className={styles.quantity}>{stats.views}</span>
             </li>
             <li>
                 <span className={styles.label}>Likes</span>
-                <span className={styles.quantity}>{likes}</span>
+                <span className={styles.quantity}>{stats.likes}</span>
             </li>
         </ul>
     </div>
@@ -38,9 +38,7 @@ SocialProfile.propTypes = {
     name: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,
     location: PropTypes.string,
-    followers: PropTypes.number,
-    views: PropTypes.number,
-    likes: PropTypes.number,
+    stats: PropTypes.object,
 };
 
 

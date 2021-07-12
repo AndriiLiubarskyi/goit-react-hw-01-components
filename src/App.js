@@ -1,13 +1,13 @@
 import React from "react";
 
-import SocialProfile from "./components/Social-profile/Social-profile";
+import Profile from "./components/Social-profile/Social-profile";
 import userData from "./user.json";
 
-import statistics from "./statistical-data.json";
+import statisticalData from "./statistical-data.json";
 import Statistics from "./components/Statistics/Statistics";
 
 import friends from "./friends.json";
-import Friends from "./components/Friends/Friends";
+import FriendList from "./components/Friends/Friends";
 
 import transactions from "./transactions.json";
 import Transactions from "./components/Transactions/Transactions";
@@ -15,23 +15,21 @@ import Transactions from "./components/Transactions/Transactions";
 const App = () => {
     return (
         <div>
-        <SocialProfile
+        <Profile
             key={userData.tag}
             avatar={userData.avatar}
             name={userData.name}
             tag={userData.tag}
             location={userData.location}
-            followers={userData.stats.followers}
-            views={userData.stats.views}
-            likes={userData.stats.likes}
+            stats={userData.stats}
         />
 
              <Statistics
                 title='Upload stats'
-                stats={statistics}   
+                stats={statisticalData}   
             />
 
-            <Friends
+            <FriendList
                 friends={friends}
             />
 
